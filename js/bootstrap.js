@@ -1,4 +1,3 @@
-
 /*!
  * bootstrap-stylus
  */
@@ -12,7 +11,7 @@ var path = require('path');
 
 module.exports = function(){
   return function(style){
-    style.include(__dirname + '/../styl/bootstrap.styl');
+    style.include(__dirname + '/../styl');
     style.use(nib());
   }
 };
