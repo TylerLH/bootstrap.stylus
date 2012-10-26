@@ -564,7 +564,7 @@ $gridSystem-gridColumn($gridGutterWidth) {
 }
 
 // Take these values and mixins, and make 'em do their thang
-$gridSystem-generate($gridColumns, $gridColumnWidth, $gridGutterWidth) {
+$gridSystem-generate($gridColumnWidth, $gridGutterWidth) {
   // Row surrounds the columns
   .row {
     margin-left: $gridGutterWidth * -1;
@@ -662,7 +662,7 @@ $fluidGridSystem-gridColumn($fluidGridGutterWidth) {
 }
 
 // Take these values and mixins, and make 'em do their thang
-$fluidGridSystem-generate($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth) {
+$fluidGridSystem-generate($fluidGridColumnWidth, $fluidGridGutterWidth) {
   // Row surrounds the columns
   .row-fluid {
     width: 100%;
