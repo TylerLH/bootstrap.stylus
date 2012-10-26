@@ -1,12 +1,11 @@
 //
 // Responsive: Navbar
 // --------------------------------------------------
-// @todo This has not been converted yet
 
 
 // TABLETS AND BELOW
 // -----------------
-@media (max-width: @navbarCollapseWidth) {
+@media (max-width: $navbarCollapseWidth) {
 
   // UNFIX THE TOPBAR
   // ----------------
@@ -20,10 +19,10 @@
     position: static;
   }
   .navbar-fixed-top {
-    margin-bottom: @baseLineHeight;
+    margin-bottom: $baseLineHeight;
   }
   .navbar-fixed-bottom {
-    margin-top: @baseLineHeight;
+    margin-top: $baseLineHeight;
   }
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
@@ -49,7 +48,7 @@
   // Block-level the nav
   .nav-collapse .nav {
     float: none;
-    margin: 0 0 (@baseLineHeight / 2);
+    margin: 0 0 ($baseLineHeight / 2);
   }
   .nav-collapse .nav > li {
     float: none;
@@ -61,7 +60,7 @@
     display: none;
   }
   .nav-collapse .nav .nav-header {
-    color: @navbarText;
+    color: $navbarText;
     text-shadow: none;
   }
   // Nav and dropdown links in navbar
@@ -69,7 +68,7 @@
   .nav-collapse .dropdown-menu a {
     padding: 9px 15px;
     font-weight: bold;
-    color: @navbarLinkColor;
+    color: $navbarLinkColor;
     .border-radius(3px);
   }
   // Buttons
@@ -83,11 +82,11 @@
   }
   .nav-collapse .nav > li > a:hover,
   .nav-collapse .dropdown-menu a:hover {
-    background-color: @navbarBackground;
+    background-color: $navbarBackground;
   }
   .navbar-inverse .nav-collapse .nav > li > a:hover,
   .navbar-inverse .nav-collapse .dropdown-menu a:hover {
-    background-color: @navbarInverseBackground;
+    background-color: $navbarInverseBackground;
   }
   // Buttons in the navbar
   .nav-collapse.in .btn-group {
@@ -100,7 +99,7 @@
     top: auto;
     left: auto;
     float: none;
-    display: block;
+    display: none;
     max-width: none;
     margin: 0 15px;
     padding: 0;
@@ -109,6 +108,10 @@
     .border-radius(0);
     .box-shadow(none);
   }
+  .nav-collapse .open > .dropdown-menu { 
+    display: block; 
+  }
+
   .nav-collapse .dropdown-menu:before,
   .nav-collapse .dropdown-menu:after {
     display: none;
@@ -126,16 +129,16 @@
   .nav-collapse .navbar-form,
   .nav-collapse .navbar-search {
     float: none;
-    padding: (@baseLineHeight / 2) 15px;
-    margin: (@baseLineHeight / 2) 0;
-    border-top: 1px solid @navbarBackground;
-    border-bottom: 1px solid @navbarBackground;
+    padding: ($baseLineHeight / 2) 15px;
+    margin: ($baseLineHeight / 2) 0;
+    border-top: 1px solid $navbarBackground;
+    border-bottom: 1px solid $navbarBackground;
     .box-shadow(inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1));
   }
   .navbar-inverse .nav-collapse .navbar-form,
   .navbar-inverse .nav-collapse .navbar-search {
-    border-top-color: @navbarInverseBackground;
-    border-bottom-color: @navbarInverseBackground;
+    border-top-color: $navbarInverseBackground;
+    border-bottom-color: $navbarInverseBackground;
   }
   // Pull right (secondary) nav content
   .navbar .nav-collapse .nav.pull-right {
