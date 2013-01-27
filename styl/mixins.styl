@@ -564,7 +564,7 @@ $gridSystem-gridColumn($gridGutterWidth) {
 }
 
 // Take these values and mixins, and make 'em do their thang
-$gridSystem-generate($gridColumns, $gridColumnWidth, $gridGutterWidth) {
+$gridSystem-generate($gridColumnWidth, $gridGutterWidth) {
   // Row surrounds the columns
   .row {
     margin-left: $gridGutterWidth * -1;
@@ -650,10 +650,8 @@ $gridSystem-generate($gridColumns, $gridColumnWidth, $gridGutterWidth) {
   }
 }
 
-
-
 $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, $columns) {
-  width: 1% * ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1));
+  width: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1));
 }
 
 $fluidGridSystem-gridColumn($fluidGridGutterWidth) {
@@ -662,56 +660,56 @@ $fluidGridSystem-gridColumn($fluidGridGutterWidth) {
 }
 
 // Take these values and mixins, and make 'em do their thang
-$fluidGridSystem-generate($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth) {
+$fluidGridSystem-generate($fluidGridColumnWidth, $fluidGridGutterWidth) {
   // Row surrounds the columns
   .row-fluid {
     width: 100%;
     $clearfix();
 
     // Find all .span# classes within .row and give them the necessary properties for grid columns (supported by all browsers back to IE7, thanks $dhg)
-    > [class*="span"] {
+    [class*="span"] {
       $fluidGridSystem-gridColumn($fluidGridGutterWidth);
     }
 
-    > [class*="span"]:first-child {
+    [class*="span"]:first-child {
       margin-left: 0;
     }
 
     // Default columns
-    > .span1 {
+    .span1 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 1);
     }
-    > .span2 {
+    .span2 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 2);
     }
-    > .span3 {
+    .span3 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 3);
     }
-    > .span4 {
+    .span4 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 4);
     }
-    > .span5 {
+    .span5 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 5);
     }
-    > .span6 {
+    .span6 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 6);
     }
-    > .span7 {
+    .span7 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 7);
     }
-    > .span8 {
+    .span8 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 8);
     }
-    > .span9 {
+    .span9 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 9);
     }
-    > .span10 {
+    .span10 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 10);
     }
-    > .span11 {
+    .span11 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 11);
     }
-    > .span12 {
+    .span12 {
       $fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 12);
     }
   }
@@ -719,7 +717,7 @@ $fluidGridSystem-generate($gridColumns, $fluidGridColumnWidth, $fluidGridGutterW
 $inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, $columns) {
   width: (($gridColumnWidth) * $columns) + ($gridGutterWidth * ($columns - 1)) - 10;
 }
-$inputGridSystem-generate($gridColumns, $gridColumnWidth, $gridGutterWidth) {
+$inputGridSystem-generate($gridColumnWidth, $gridGutterWidth) {
   input,
   textarea,
   .uneditable-input {
@@ -760,13 +758,4 @@ $inputGridSystem-generate($gridColumns, $gridColumnWidth, $gridGutterWidth) {
       $inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 12);
     }
   }
-}
-$makeRow() {
-  margin-left: $gridGutterWidth * -1;
-  $clearfix();
-}
-$makeColumn($columns = 1) {
-  float: left;
-  margin-left: $gridGutterWidth;
-  width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
 }

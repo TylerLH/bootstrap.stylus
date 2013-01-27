@@ -140,6 +140,149 @@ a:hover {
   -moz-border-radius: 500px;
   border-radius: 500px;
 }
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  margin-left: 20px;
+}
+.span1 {
+  width: 60px;
+}
+.span2 {
+  width: 140px;
+}
+.span3 {
+  width: 220px;
+}
+.span4 {
+  width: 300px;
+}
+.span5 {
+  width: 380px;
+}
+.span6 {
+  width: 460px;
+}
+.span7 {
+  width: 540px;
+}
+.span8 {
+  width: 620px;
+}
+.span9 {
+  width: 700px;
+}
+.span10 {
+  width: 780px;
+}
+.span11 {
+  width: 860px;
+}
+.span12,
+.container {
+  width: 940px;
+}
+.offset1 {
+  margin-left: 100px;
+}
+.offset2 {
+  margin-left: 180px;
+}
+.offset3 {
+  margin-left: 260px;
+}
+.offset4 {
+  margin-left: 340px;
+}
+.offset5 {
+  margin-left: 420px;
+}
+.offset6 {
+  margin-left: 500px;
+}
+.offset7 {
+  margin-left: 580px;
+}
+.offset8 {
+  margin-left: 660px;
+}
+.offset9 {
+  margin-left: 740px;
+}
+.offset10 {
+  margin-left: 820px;
+}
+.offset11 {
+  margin-left: 900px;
+}
+.row-fluid {
+  width: 100%;
+  *zoom: 1;
+}
+.row-fluid:before,
+.row-fluid:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row-fluid:after {
+  clear: both;
+}
+.row-fluid [class*="span"] {
+  float: left;
+  margin-left: 2.127659574468085%;
+}
+.row-fluid [class*="span"]:first-child {
+  margin-left: 0;
+}
+.row-fluid .span1 {
+  width: 6.382978723404255%;
+}
+.row-fluid .span2 {
+  width: 13.037573562698054%;
+}
+.row-fluid .span3 {
+  width: 19.963784517881393%;
+}
+.row-fluid .span4 {
+  width: 27.161611588954276%;
+}
+.row-fluid .span5 {
+  width: 34.63105477591671%;
+}
+.row-fluid .span6 {
+  width: 42.37211407876867%;
+}
+.row-fluid .span7 {
+  width: 50.384789497510184%;
+}
+.row-fluid .span8 {
+  width: 58.669081032141236%;
+}
+.row-fluid .span9 {
+  width: 67.22498868266183%;
+}
+.row-fluid .span10 {
+  width: 76.05251244907198%;
+}
+.row-fluid .span11 {
+  width: 85.15165233137165%;
+}
+.row-fluid .span12 {
+  width: 94.52240832956088%;
+}
 [class*="span"].hide,
 .row-fluid [class*="span"].hide {
   display: none;
