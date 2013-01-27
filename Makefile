@@ -1,6 +1,6 @@
 DATE=$(shell DATE)
-BOOTSTRAP = ../css/bootstrap-2.0.1.css
-BOOTSTRAP_MIN = ../css/bootstrap-2.0.1.min.css
+BOOTSTRAP = ../css/bootstrap-2.1.1.css
+BOOTSTRAP_MIN = ../css/bootstrap-2.1.1.min.css
 BOOTSTRAP_STYL = ./bootstrap.styl
 STYLUS_PROCESSOR ?= `which stylus`
 
