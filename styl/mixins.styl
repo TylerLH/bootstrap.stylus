@@ -81,7 +81,7 @@ $square($size) {
 // Placeholder text
 // -------------------------
 $placeholder($color = $placeholderText) {
-  :-moz-placeholder {
+  &:-moz-placeholder {
     color: $color;
   }
   &:-ms-input-placeholder {
@@ -345,6 +345,7 @@ $box-sizing($boxmodel) {
 $user-select($select) {
   -webkit-user-select: $select;
   -moz-user-select: $select;
+  -ms-user-select: $select;
   -o-user-select: $select;
   user-select: $select;
 }
@@ -469,6 +470,8 @@ $gradient-striped($color, $angle = -45deg) {
 $reset-filter() {
   filter: "progid:DXImageTransform.Microsoft$gradient(enabled = false)";
 }
+
+
 
 // COMPONENT MIXINS
 // --------------------------------------------------

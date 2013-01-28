@@ -1,14 +1,14 @@
 {
     "name": "bootstrap.stylus"
-  , "version": "0.0.1"
   , "description": "Twitter's Bootstrap written with Stylus"
+  , "version": "2.2.2"
   , "keywords": ["css", "stylus", "twitter", "bootstrap"]
   , "author": "Javier Vizoso <viz@blup.me>"
   , "dependencies": {
     "nib": "0.3.x"
   }
   , "devDependencies": {
-      "connect": "2.0.x"
+      "connect": "2.1.3"
     , "stylus": "0.24.0"
   }
   , "main": "index"
